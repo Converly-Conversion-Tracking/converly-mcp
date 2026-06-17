@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.converly/converly",
-  "description": "Set up and manage conversion tracking by chatting with your AI assistant. Connect ad platforms (Google Ads, Meta, GA4), build and publish conversion flows, install tracking, and check conversions, all inside your Converly account.",
+  "description": "Set up and manage conversion tracking by chatting with your AI assistant.",
   "version": "1.0.0",
   "repository": {
     "url": "https://github.com/Converly-Conversion-Tracking/converly-mcp",
