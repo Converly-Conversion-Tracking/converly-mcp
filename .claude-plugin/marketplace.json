@@ -8,8 +8,10 @@
     {
       "name": "converly",
       "source": "./",
-      "description": "Set up and monitor website conversion tracking in conversation: connect ad platforms, build and publish conversion flows, install tracking, and diagnose delivery failures.",
-      "defaultEnabled": false
+      "description": "Set up and monitor website conversion tracking in conversation: connect ad platforms, build and publish conversion flows, install tracking, and diagnose delivery failures."
     }
-  ]
+  ],
+  "metadata": {
+    "description": "Converly's official plugin: set up and monitor website conversion tracking in conversation."
+  }
 }

@@ -17,7 +17,7 @@ This repository is also a Claude Code plugin. It bundles the hosted connector to
 /plugin install converly@converly
 ```
 
-The plugin connects to the same hosted server; you authorize with your Converly account on first use. It is disabled by default after install so you can enable it only in the projects where you want it.
+The plugin connects to the same hosted server; you authorize with your Converly account on first use.
 
 ## What you can do
 
