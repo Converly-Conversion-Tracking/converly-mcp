@@ -1,0 +1,15 @@
+{
+  "name": "converly",
+  "owner": {
+    "name": "Converly",
+    "url": "https://converly.io"
+  },
+  "plugins": [
+    {
+      "name": "converly",
+      "source": "./",
+      "description": "Set up and monitor website conversion tracking in conversation: connect ad platforms, build and publish conversion flows, install tracking, and diagnose delivery failures.",
+      "defaultEnabled": false
+    }
+  ]
+}

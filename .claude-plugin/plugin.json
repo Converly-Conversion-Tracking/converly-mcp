@@ -1,0 +1,13 @@
+{
+  "name": "converly",
+  "version": "1.0.0",
+  "description": "Set up and monitor website conversion tracking in conversation. Connect ad platforms through Converly-hosted authorization links, build and publish conversion flows, retrieve the tracking snippet, verify captured conversions, and diagnose delivery failures. A Converly account is required; new users can create one on Converly's website as part of connecting.",
+  "author": {
+    "name": "Converly",
+    "url": "https://converly.io"
+  },
+  "homepage": "https://converly.io",
+  "repository": "https://github.com/Converly-Conversion-Tracking/converly-mcp",
+  "license": "MIT",
+  "keywords": ["conversion-tracking", "marketing", "analytics", "google-ads", "meta-ads", "forms"]
+}

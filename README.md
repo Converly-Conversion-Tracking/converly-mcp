@@ -8,6 +8,17 @@ This is a **remote, hosted MCP server**. There is nothing to install or run. You
 
 **Connector address:** `https://app.converly.io/mcp`
 
+## Use with Claude Code and Cowork (plugin)
+
+This repository is also a Claude Code plugin. It bundles the hosted connector together with two skills, one for guided conversion-tracking setup and one for diagnosing missing conversions.
+
+```
+/plugin marketplace add Converly-Conversion-Tracking/converly-mcp
+/plugin install converly@converly
+```
+
+The plugin connects to the same hosted server; you authorize with your Converly account on first use. It is disabled by default after install so you can enable it only in the projects where you want it.
+
 ## What you can do
 
 Connect it, then just say what you want. For example:

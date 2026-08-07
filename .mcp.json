@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "converly": {
+      "type": "http",
+      "url": "https://app.converly.io/mcp"
+    }
+  }
+}
