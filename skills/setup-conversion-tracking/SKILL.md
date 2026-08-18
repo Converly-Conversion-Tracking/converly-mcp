@@ -15,11 +15,11 @@ Tracking only works when THREE things are all true. A flow is published, the des
 
 3. **Build the flow.** Call `list_trigger_types` for the trigger id and `list_action_types` for the exact action config the destination needs. Create with `create_flow`, then run `validate_flow` and fix any problems it reports.
 
-4. **Publish.** Call `publish_flow`. Read its result carefully. If `install_status.detection` is "never_seen", the site has never captured data. That usually means the snippet still needs to be installed, but it is not proof (tag managers, consent banners, or a just-published first flow can all delay the signals), so offer the snippet and suggest a real test submission rather than declaring tracking broken.
+4. **Publish.** Call `publish_flow`. Read its result carefully. If `install_status.detection` is "never_seen", the loader has never phoned home from the site. That usually means the snippet still needs to be installed, so offer it. The check is quick to settle: the loader phones home when a page loads, so once the snippet is in, ask the user to open any page of their site and check `get_install_status` again. Detection flips to "confirmed" within moments. If it stays "never_seen" after a page load, the snippet is not live yet (site builders need a republish). Two setups never send the phone-home signal: sites using the Converly Webflow app, and visitors with privacy signals or unconsented cookie banners. For those, a real form submission appearing in `list_events` is the proof instead.
 
 5. **Get the snippet installed.** Call `get_install_snippet` and give the user the script tag. Tell them to add it to their site's head section, or through their website platform's custom code setting. This step needs the user to act. Do not skip it and do not suggest testing before it is done.
 
-6. **Verify.** Once the user says the snippet is in place, suggest a real form submission, then check `list_events` for the captured conversion and `get_event_detail` for the per destination delivery result. `send_test_event` can fire a test conversion to a connected destination without a form submission.
+6. **Verify.** Once the snippet is in place, ask the user to open any page of their site, then check `get_install_status`. "confirmed" proves the loader is running (and `origin_authorized: false` means the site domain is wrong, fix it with `update_site`). Then suggest a real form submission and check `list_events` for the captured conversion and `get_event_detail` for the per destination delivery result. Only the submission proves the form itself gets detected. `send_test_event` can fire a test conversion to a connected destination without a form submission.
 
 ## Cautions
 

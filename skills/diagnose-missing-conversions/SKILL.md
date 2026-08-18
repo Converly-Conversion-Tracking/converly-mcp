@@ -9,7 +9,7 @@ Work through the funnel in order. Each step rules out one layer, so report what 
 
 ## Steps
 
-1. **Is anything being captured at all?** Call `get_install_status` for the site. If detection is "never_seen", no data has ever arrived. The most likely cause is that the Converly snippet isn't installed. Give the user the script tag from `get_install_snippet` and stop here until it's in place. If detection is "confirmed", note `last_seen_at` and continue.
+1. **Is anything being captured at all?** Call `get_install_status` for the site. If detection is "never_seen", the loader has never phoned home. The most likely cause is that the Converly snippet isn't installed. Give the user the script tag from `get_install_snippet`, then have them open any page of their site and re-check, the loader phones home on page load. If detection is "confirmed", note `last_seen_at`, and if the response carries `origin_authorized: false`, you have likely found the fault: the loader runs but the site's domain does not match, so every conversion is rejected. Fix the domain with `update_site`. Otherwise continue.
 
 2. **Is a flow live?** Call `list_flows`. A flow only tracks while its status is "published". If the relevant flow is a draft, run `validate_flow`, fix any problems, and publish it with `publish_flow`.
 
