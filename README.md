@@ -89,6 +89,24 @@ The server also ships guided **prompts** (one-click workflows in clients that su
 - Converly home: https://converly.io
 - Pricing and free trial: https://converly.io/pricing
 
+## Security and data handling
+
+Declared for reviewers and anyone auditing this plugin before installing it.
+
+**This plugin contains no executable code.** It is a set of manifests plus two Markdown skill files. There are no install or lifecycle hooks, no bundled binaries or minified code, no `postinstall` steps, and nothing is downloaded or run at install time.
+
+**Network endpoints contacted:**
+
+- `https://app.converly.io/mcp` — the hosted Converly MCP server, and the only endpoint this plugin causes an agent to call. It is declared in `.mcp.json` as a remote streamable HTTP server.
+
+**Credentials:** none are stored in, read by, or bundled with this plugin. Access is authorized through OAuth against the user's own Converly account on first use, and the resulting token is held by the MCP client, not by anything in this repository. The plugin never reads local files, environment variables, SSH keys, or `.env` files.
+
+**Ad platform credentials never pass through this plugin or the MCP server.** Connecting a destination such as Google Ads or Meta returns a Converly-hosted link that the user opens in their own browser to authorize the platform directly.
+
+**Scope:** the MCP server exposes named, purpose-scoped tools. There is no shell-execution tool and no catch-all passthrough. Destructive operations (deleting a flow, disconnecting a platform, changing the plan) require explicit user confirmation, and tools carry read-only and destructive annotations so clients can prompt appropriately.
+
+**Telemetry:** none beyond the API requests the user's own actions generate.
+
 ## About this repository
 
 This repository is the public home and documentation for the Converly MCP integration. It does not contain the server code. The server is a hosted part of Converly and runs at `https://app.converly.io/mcp`. For questions or issues with the MCP, open an issue here or contact Converly support.
