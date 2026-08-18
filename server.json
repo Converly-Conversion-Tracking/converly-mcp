@@ -4,7 +4,7 @@
   "description": "Set up and manage conversion tracking by chatting with your AI assistant.",
   "version": "1.0.0",
   "repository": {
-    "url": "https://github.com/Converly-Conversion-Tracking/converly-mcp",
+    "url": "https://github.com/converlyio/converly-mcp",
     "source": "github"
   },
   "websiteUrl": "https://converly.io/mcp",

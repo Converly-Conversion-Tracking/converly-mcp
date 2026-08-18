@@ -7,7 +7,7 @@
     "url": "https://converly.io"
   },
   "homepage": "https://converly.io",
-  "repository": "https://github.com/Converly-Conversion-Tracking/converly-mcp",
+  "repository": "https://github.com/converlyio/converly-mcp",
   "license": "MIT",
   "keywords": ["conversion-tracking", "marketing", "analytics", "google-ads", "meta-ads", "forms"]
 }

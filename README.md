@@ -13,7 +13,7 @@ This is a **remote, hosted MCP server**. There is nothing to install or run. You
 This repository is also a Claude Code plugin. It bundles the hosted connector together with two skills, one for guided conversion-tracking setup and one for diagnosing missing conversions.
 
 ```
-/plugin marketplace add Converly-Conversion-Tracking/converly-mcp
+/plugin marketplace add converlyio/converly-mcp
 /plugin install converly@converly
 ```
 
